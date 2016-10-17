@@ -1,5 +1,5 @@
-//метод "split"
-	var string = '1, 20, 30, "Маня", "Пупкин"';
+//РјРµС‚РѕРґ "split"
+	var string = '1, 20, 30, "РњР°РЅСЏ", "РџСѓРїРєРёРЅ"';
 	var arr = [];
 	arr = string.split(', ');
 	var arrModify = [];
@@ -9,34 +9,34 @@
 		}
 	document.getElementById('arraySplit').innerHTML = arrModify;
 			
-//метод "join"
+//РјРµС‚РѕРґ "join"
 	var arrJoin = arr.join(';');
 	document.getElementById('arrayJoin').innerHTML = arrJoin;
 			
-//метод "delete"
-	var arrAfterDelete = arr.slice(0, 5); //slice использовано для копирования масcива.
+//РјРµС‚РѕРґ "delete"
+	var arrAfterDelete = arr.slice(0, 5); //slice РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РјР°СЃcРёРІР°.
 	delete arrAfterDelete[2];
 	document.getElementById('arrayDelete').innerHTML = arrAfterDelete;
 			
-//метод slice
+//РјРµС‚РѕРґ slice
 	var arrSlice = arr.slice(1, 4);
 	document.getElementById('arraySlice').innerHTML = arrSlice;
 			
-//метод sort
-	var arrSort = arr.slice(0, 5); //slice использовано для копирования масcива.
+//РјРµС‚РѕРґ sort
+	var arrSort = arr.slice(0, 5); //slice РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РјР°СЃcРёРІР°.
 	arrSort.sort();
 	document.getElementById('arraySort').innerHTML = arrSort;
 			
-//метод push
-	var arrPush = arr.slice(0, 5); //slice использовано для копирования маcсива.
-	arrPush.push("Васелиса");
+//РјРµС‚РѕРґ push
+	var arrPush = arr.slice(0, 5); //slice РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РјР°cСЃРёРІР°.
+	arrPush.push("Р’Р°СЃРµР»РёСЃР°");
 	document.getElementById('arrPush').innerHTML = arrPush;
 			
-//метод pop
+//РјРµС‚РѕРґ pop
 	var arrPop = arrPush.pop();
 	document.getElementById('arrPop').innerHTML = arrPop;
 			
-//метод shift
-	var arrForShift = arr.slice(0, 5); //slice использовано для копирования маcсива.
+//РјРµС‚РѕРґ shift
+	var arrForShift = arr.slice(0, 5); //slice РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РјР°cСЃРёРІР°.
 	var arrShift = arrForShift.shift();
-	document.getElementById('arrShift').innerHTML = arrShift + " измененный маcсив - " + arrForShift ;
+	document.getElementById('arrShift').innerHTML = arrShift + " РёР·РјРµРЅРµРЅРЅС‹Р№ РјР°cСЃРёРІ - " + arrForShift ;
