@@ -1,6 +1,7 @@
 MyArray = {};
 MyArray.pop = function () {
     var result = this[this.length-1];
+    delete this[this.length-1];
     this.length = this.length-1;
     return result;
 };
@@ -15,21 +16,21 @@ MyArray.push = function (addValue) {
 
 MyArray.slice = function (from, to) {
     var result = [];
-    if (arguments[1] !== undefined) {
-        for (var i = 0; i < arguments[1]; i++) {
-            if (i < arguments[0]) continue;
+    if (to !== undefined) {
+        for (var i = 0; i < to; i++) {
+            if (i < from) continue;
             result.push(this[i]);
         }
         return result;
     }
-    else if (arguments[0] < 0) {
-        for (var k = (this.length + arguments[0]) ; k < this.length; k++) {
+    else if (from < 0) {
+        for (var k = (this.length + from) ; k < this.length; k++) {
             result.push(this[k]);
         }
         return result;
     }
      else {
-        for (var j = arguments[0]; j < this.length; j++) {
+        for (var j = from; j < this.length; j++) {
             result.push(this[j]);
         }
         return result;
@@ -41,7 +42,7 @@ MyArray.join = function (addValue) {
     for (var i = 0; i < this.length; i++) {
        str = str + this[i];
        if (i < this.length-1) {
-            str = str + arguments[0];
+            str = str + addValue;
         }
     }
     return str;
@@ -57,17 +58,17 @@ MyArray.reverse = function () {
     return this;
 };
 
-var arrForTestPop = ['a', 'b', 'c', 4, 5, 6];
+var arrForTestPop = ['a1', 'b2', 'c3', 44, 55, 66];
 var arrForTestPush = ['a', 'b', 'c', 4, 5, 6];
 var arrForTestSlice = ['a', 'b', 'c', 4, 5, 6];
 var arrForTestJoin = ['a', 'b', 'c', 4, 5, 6];
 var arrForTestReverse = ['a', 'b', 'c', 4, 5, 6];
 
 console.log("Метод pop");
-console.log(MyArray.pop.call(arrForTestPop));          //6
+console.log(MyArray.pop.call(arrForTestPop));           //6
 console.log(arrForTestPop);                             //['a', 'b', 'c', 4, 5]
-Array.prototype.pop = MyArray.pop;
 console.log(arrForTestPop.pop());                       //5
+Array.prototype.pop = MyArray.pop;
 console.log(arrForTestPop);                             //["a", "b", "c", 4]
 
 console.log("Метод push");
@@ -101,9 +102,9 @@ console.log(arrForTestReverse);                         //["a", "b", "c", 4, 5, 
 
 console.log("Метод sum у чисел");
 Number.prototype.sum = function (arg) {
-    var result;
-    result = this + arg;
-    return result;
+    return this + + arg;
 }
 var y = 4;
 console.log(y.sum(3));                                  //7
+console.log(y.sum("some string"));                      //NaN
+console.log(y.sum("-200"));                             //-196
