@@ -53,6 +53,20 @@
 // var testSumToArithProgression = sumToArithProgression(10000);
 // console.log(testSumToArithProgression);
 
+// // ----------Fibonacci Numbers-------------
+var testFib0 = fibRecursion(0);
+var testFib1 = fibRecursion(1);
+var testFib2 = fibRecursion(2);
+var testFib3 = fibRecursion(3);
+var testFib5 = fibRecursion(5);
+var testFib6 = fibRecursion(6);
+console.log(testFib0);
+console.log(testFib1);
+console.log(testFib2);
+console.log(testFib3);
+console.log(testFib5);
+console.log(testFib6);
+
 function factorialRecursion(number) {
     var result;
     if (number < 0) {
@@ -119,7 +133,16 @@ function sumToArithProgression(n) {
     
 }
 
-
-
+function fibRecursion(n) {
+    var res;
+    if (n > 1){
+        var n1 = n - 1;
+        var n2 = n - 2;
+        res = fibRecursion(n1)+fibRecursion(n2);
+    } else {
+        res = n;
+    }
+    return res;
+}
 
 
