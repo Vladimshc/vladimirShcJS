@@ -44,12 +44,28 @@ console.log("Number -1 = " + testNumber4);
 
 // ----------Sum To-------------
 console.log("Sum Numbers, 1 to N");
+
+var t0SumToRec = performance.now();
 var testSumToRec = sumToRecursion(10000);
+var t1SumToRec = performance.now();
 console.log("Sum (recursion method)  1 to 10000 = " + testSumToRec);
-var testSumToCyc = sumToCycle(10000);
-console.log("Sum (cycle method)  1 to 10000 = " + testSumToCyc);
+console.log("\t calculated by recursive took " +
+    (t1SumToRec - t0SumToRec).toFixed(5) + " milliseconds.");
+
+
+var t0SumToCycle = performance.now();
+var testSumToCycle = sumToCycle(10000);
+var t1SumToCycle = performance.now();
+console.log("Sum (cycle method)  1 to 10000 = " + testSumToCycle);
+console.log("\t calculated by cycle took " +
+    (t1SumToCycle - t0SumToCycle).toFixed(5) + " milliseconds.");
+
+var t0SumToArithProgression = performance.now();
 var testSumToArithProgression = sumToArithProgression(10000);
+var t1SumToArithProgression = performance.now();
 console.log("Sum (arithmetical progression)  1 to 10000 = " + testSumToArithProgression);
+console.log("\t calculated by arithmetical progression took " +
+    (t1SumToArithProgression - t0SumToArithProgression).toFixed(5) + " milliseconds.");
 
 // // ----------Fibonacci Numbers-------------
 console.log("Fibonacci number, calculated by recursive");
