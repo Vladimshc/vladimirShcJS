@@ -67,6 +67,11 @@ console.log("Number 3 : " + testFib3);
 console.log("Number 4 : " + testFib4);
 console.log("Number 5 : " + testFib5);
 console.log("Number 6 : " + testFib6);
+var t0FibRecursion = performance.now();
+var fib20Rec = fibRecursion(20);
+var t1FibRecursion = performance.now();
+console.log("Call to Fibonacci number 20 = " + fib20Rec + ", calculated by recursive took " +
+    (t1FibRecursion - t0FibRecursion).toFixed(5) + " milliseconds.");
 
 console.log("Fibonacci number, calculated by cycle");
 var testFibCycle0 = fibCycle(0);
@@ -83,6 +88,11 @@ console.log("Number 3 : " + testFibCycle3);
 console.log("Number 4 : " + testFibCycle4);
 console.log("Number 5 : " + testFibCycle5);
 console.log("Number 6 : " + testFibCycle6);
+var t0FibCycle = performance.now();
+var fib20Cycle = fibCycle(20);
+var t1FibCycle = performance.now();
+console.log("Call to Fibonacci number 20 = " + fib20Cycle + ", calculated by cycle took " +
+    (t1FibCycle - t0FibCycle).toFixed(5) + " milliseconds.");
 
 
 //-----------function --------------------------
