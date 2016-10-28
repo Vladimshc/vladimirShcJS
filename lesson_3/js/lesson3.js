@@ -54,18 +54,37 @@
 // console.log(testSumToArithProgression);
 
 // // ----------Fibonacci Numbers-------------
+console.log("Fibonacci number, calculated by recursive");
 var testFib0 = fibRecursion(0);
 var testFib1 = fibRecursion(1);
 var testFib2 = fibRecursion(2);
 var testFib3 = fibRecursion(3);
+var testFib4 = fibRecursion(4);
 var testFib5 = fibRecursion(5);
 var testFib6 = fibRecursion(6);
-console.log(testFib0);
-console.log(testFib1);
-console.log(testFib2);
-console.log(testFib3);
-console.log(testFib5);
-console.log(testFib6);
+console.log("Number 0 : " + testFib0);
+console.log("Number 1 : " + testFib1);
+console.log("Number 2 : " + testFib2);
+console.log("Number 3 : " + testFib3);
+console.log("Number 4 : " + testFib4);
+console.log("Number 5 : " + testFib5);
+console.log("Number 6 : " + testFib6);
+
+console.log("Fibonacci number, calculated by cycle");
+var testFibCycle0 = fibCycle(0);
+var testFibCycle1 = fibCycle(1);
+var testFibCycle2 = fibCycle(2);
+var testFibCycle3 = fibCycle(3);
+var testFibCycle4 = fibCycle(4);
+var testFibCycle5 = fibCycle(5);
+var testFibCycle6 = fibCycle(6);
+console.log("Number 0 : " + testFibCycle0);
+console.log("Number 1 : " + testFibCycle1);
+console.log("Number 2 : " + testFibCycle2);
+console.log("Number 3 : " + testFibCycle3);
+console.log("Number 4 : " + testFibCycle4);
+console.log("Number 5 : " + testFibCycle5);
+console.log("Number 6 : " + testFibCycle6);
 
 function factorialRecursion(number) {
     var result;
@@ -144,5 +163,18 @@ function fibRecursion(n) {
     }
     return res;
 }
+
+function fibCycle(n) {
+    var num1 = 0;
+    var num2 = 1;
+    var num3;
+    for (var i = 0; i < n; i++){
+        num3 = num1 + num2;
+        num1 = num2;
+        num2 = num3;
+     }
+    return num1;
+}
+
 
 
