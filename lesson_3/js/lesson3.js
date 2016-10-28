@@ -1,57 +1,54 @@
-// // // ---------Faktorial-----------
-// console.log("Faktorial");
-// var testFaktorial_2 = factorialRecursion(-2);
-// var testFaktorial_1 = factorialRecursion(-1);
-// var testFaktorial0 = factorialRecursion(0);
-// var testFaktorial1 = factorialRecursion(1);
-// var testFaktorial2 = factorialRecursion(2);
-// var testFaktorial3 = factorialRecursion(3);
-// var testFaktorial4 = factorialRecursion(4);
-// var testFaktorial5 = factorialRecursion(5);
-// var testFaktorial6 = factorialRecursion(6);
-// console.log(testFaktorial_2);
-// console.log(testFaktorial_1);
-// console.log(testFaktorial0);
-// console.log(testFaktorial1);
-// console.log(testFaktorial2);
-// console.log(testFaktorial3);
-// console.log(testFaktorial4);
-// console.log(testFaktorial5);
-// console.log(testFaktorial6);
-// //
-// //----------Degree-------------
-// console.log("Degree");
-// var testDegree_0 = extentRecursion(0, -8);
-// var testDegree_8 = extentRecursion(2, -8);
-// var testDegree0 = extentRecursion(2, 0);
-// var testDegree8 = extentRecursion(2, 8);
-// console.log(testDegree_0);
-// console.log(testDegree_8);
-// console.log(testDegree0);
-// console.log(testDegree8);
+// // ---------Faktorial-----------
+console.log("Faktorial, calculated by recursive");
+var testFaktorial_2 = factorialRecursion(-2);
+var testFaktorial_1 = factorialRecursion(-1);
+var testFaktorial0 = factorialRecursion(0);
+var testFaktorial1 = factorialRecursion(1);
+var testFaktorial2 = factorialRecursion(2);
+var testFaktorial3 = factorialRecursion(3);
+var testFaktorial4 = factorialRecursion(4);
+var testFaktorial5 = factorialRecursion(5);
+var testFaktorial6 = factorialRecursion(6);
+console.log("Number -2! : " + testFaktorial_2);
+console.log("Number -1! : " + testFaktorial_1);
+console.log("Number 0! : " + testFaktorial0);
+console.log("Number 1! : " + testFaktorial1);
+console.log("Number 2! : " + testFaktorial2);
+console.log("Number 3! : " + testFaktorial3);
+console.log("Number 4! : " + testFaktorial4);
+console.log("Number 5! : " + testFaktorial5);
+console.log("Number 6! : " + testFaktorial6);
 //
-// // ----------Sum Numbers-------------
-// console.log("Sum Numbers");
-// var testNumber1 = sumNumbersRecursion(3742);
-// var testNumber2 = sumNumbersRecursion(12345678912);
-// var testNumber3 = sumNumbersRecursion(0);
-// var testNumber4 = sumNumbersRecursion(-1);
-// console.log(testNumber1);
-// console.log(3+7+4+2);
-// console.log(testNumber2);
-// console.log(1+2+3+4+5+6+7+8+9+1+2);
-// console.log(testNumber3);
-// console.log(0);
-// console.log(testNumber4);
-// console.log(-1);
+//----------Degree-------------
+console.log("Degree, calculated by recursive");
+var testDegree_0 = extentRecursion(0, -8);
+var testDegree_8 = extentRecursion(2, -8);
+var testDegree0 = extentRecursion(2, 0);
+var testDegree8 = extentRecursion(2, 8);
+console.log("0 to -8 degrees = " + testDegree_0);
+console.log("2 to -8 degrees = " + testDegree_8);
+console.log("2 to 0 degrees = " + testDegree0);
+console.log("2 to 8 degrees = " + testDegree8);
 
-// // ----------Sum To-------------
-// var testSumToRec = sumToRecursion(10000);
-// console.log(testSumToRec);
-// var testSumToCyc = sumToCycle(10000);
-// console.log(testSumToCyc);
-// var testSumToArithProgression = sumToArithProgression(10000);
-// console.log(testSumToArithProgression);
+// ----------Sum Numbers-------------
+console.log("Sum Numbers, calculated by recursive");
+var testNumber1 = sumNumbersRecursion(3742);
+var testNumber2 = sumNumbersRecursion(12345678912);
+var testNumber3 = sumNumbersRecursion(0);
+var testNumber4 = sumNumbersRecursion(-1);
+console.log("Number 3742, 3+7+4+2 = " + testNumber1);
+console.log("Number 12345678912, 1+2+3+4+5+6+7+8+9+1+2 = " + testNumber2);
+console.log("Number 0, = " + testNumber3);
+console.log("Number -1 = " + testNumber4);
+
+// ----------Sum To-------------
+console.log("Sum Numbers, 1 to N");
+var testSumToRec = sumToRecursion(10000);
+console.log("Sum (recursion method)  1 to 10000 = " + testSumToRec);
+var testSumToCyc = sumToCycle(10000);
+console.log("Sum (cycle method)  1 to 10000 = " + testSumToCyc);
+var testSumToArithProgression = sumToArithProgression(10000);
+console.log("Sum (arithmetical progression)  1 to 10000 = " + testSumToArithProgression);
 
 // // ----------Fibonacci Numbers-------------
 console.log("Fibonacci number, calculated by recursive");
