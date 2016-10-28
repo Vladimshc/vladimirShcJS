@@ -1,3 +1,4 @@
+// ----------Console Output---------------
 // // ---------Faktorial-----------
 console.log("Faktorial, calculated by recursive");
 var testFaktorial_2 = factorialRecursion(-2);
@@ -83,6 +84,8 @@ console.log("Number 4 : " + testFibCycle4);
 console.log("Number 5 : " + testFibCycle5);
 console.log("Number 6 : " + testFibCycle6);
 
+
+//-----------function --------------------------
 function factorialRecursion(number) {
     var result;
     if (number < 0) {
@@ -121,8 +124,7 @@ function extentRecursion(number, deg) {
 function sumNumbersRecursion(number) {
     var res = 0;
     if (number > 0){
-        res = number % 10;
-        res = res + sumNumbersRecursion((number/10)^0);
+        res = (number % 10) + sumNumbersRecursion((number/10)^0);
     }
     return res;
 }
@@ -144,17 +146,13 @@ function sumToCycle(n) {
 }
 
 function sumToArithProgression(n) {
-    var res;
-    return res = (n + 1)/2*n;
-    
+    return (n + 1)/2*n;
 }
 
 function fibRecursion(n) {
     var res;
     if (n > 1){
-        var n1 = n - 1;
-        var n2 = n - 2;
-        res = fibRecursion(n1)+fibRecursion(n2);
+        res = fibRecursion(n - 1) + fibRecursion(n - 2);
     } else {
         res = n;
     }
