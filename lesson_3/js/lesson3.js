@@ -1,55 +1,66 @@
 // ----------Console Output---------------
 // ---------Faktorial-----------
-console.log("Faktorial, calculated by recursive");
-var testFaktorial_2 = factorialRecursion(-2);
-var testFaktorial_1 = factorialRecursion(-1);
-var testFaktorial0 = factorialRecursion(0);
-var testFaktorial1 = factorialRecursion(1);
-var testFaktorial2 = factorialRecursion(2);
-var testFaktorial3 = factorialRecursion(3);
-var testFaktorial4 = factorialRecursion(4);
-var testFaktorial5 = factorialRecursion(5);
-var testFaktorial6 = factorialRecursion(6);
-console.log("Number -2! : " + testFaktorial_2);
-console.log("Number -1! : " + testFaktorial_1);
-console.log("Number 0! : " + testFaktorial0);
-console.log("Number 1! : " + testFaktorial1);
-console.log("Number 2! : " + testFaktorial2);
-console.log("Number 3! : " + testFaktorial3);
-console.log("Number 4! : " + testFaktorial4);
-console.log("Number 5! : " + testFaktorial5);
-console.log("Number 6! : " + testFaktorial6);
-
-console.log("Faktorial, calculated by cycle");
-var testFaktorialCycle_2 = factorialCycle(-2);
-var testFaktorialCycle_1 = factorialCycle(-1);
-var testFaktorialCycle0 = factorialCycle(0);
-var testFaktorialCycle1 = factorialCycle(1);
-var testFaktorialCycle2 = factorialCycle(2);
-var testFaktorialCycle3 = factorialCycle(3);
-var testFaktorialCycle4 = factorialCycle(4);
-var testFaktorialCycle5 = factorialCycle(5);
-var testFaktorialCycle6 = factorialCycle(6);
-console.log("Number -2! : " + testFaktorialCycle_2);
-console.log("Number -1! : " + testFaktorialCycle_1);
-console.log("Number 0! : " + testFaktorialCycle0);
-console.log("Number 1! : " + testFaktorialCycle1);
-console.log("Number 2! : " + testFaktorialCycle2);
-console.log("Number 3! : " + testFaktorialCycle3);
-console.log("Number 4! : " + testFaktorialCycle4);
-console.log("Number 5! : " + testFaktorialCycle5);
-console.log("Number 6! : " + testFaktorialCycle6);
+// console.log("Faktorial, calculated by recursive");
+// var testFaktorial_2 = factorialRecursion(-2);
+// var testFaktorial_1 = factorialRecursion(-1);
+// var testFaktorial0 = factorialRecursion(0);
+// var testFaktorial1 = factorialRecursion(1);
+// var testFaktorial2 = factorialRecursion(2);
+// var testFaktorial3 = factorialRecursion(3);
+// var testFaktorial4 = factorialRecursion(4);
+// var testFaktorial5 = factorialRecursion(5);
+// var testFaktorial6 = factorialRecursion(6);
+// console.log("Number -2! : " + testFaktorial_2);
+// console.log("Number -1! : " + testFaktorial_1);
+// console.log("Number 0! : " + testFaktorial0);
+// console.log("Number 1! : " + testFaktorial1);
+// console.log("Number 2! : " + testFaktorial2);
+// console.log("Number 3! : " + testFaktorial3);
+// console.log("Number 4! : " + testFaktorial4);
+// console.log("Number 5! : " + testFaktorial5);
+// console.log("Number 6! : " + testFaktorial6);
+//
+// console.log("Faktorial, calculated by cycle");
+// var testFaktorialCycle_2 = factorialCycle(-2);
+// var testFaktorialCycle_1 = factorialCycle(-1);
+// var testFaktorialCycle0 = factorialCycle(0);
+// var testFaktorialCycle1 = factorialCycle(1);
+// var testFaktorialCycle2 = factorialCycle(2);
+// var testFaktorialCycle3 = factorialCycle(3);
+// var testFaktorialCycle4 = factorialCycle(4);
+// var testFaktorialCycle5 = factorialCycle(5);
+// var testFaktorialCycle6 = factorialCycle(6);
+// console.log("Number -2! : " + testFaktorialCycle_2);
+// console.log("Number -1! : " + testFaktorialCycle_1);
+// console.log("Number 0! : " + testFaktorialCycle0);
+// console.log("Number 1! : " + testFaktorialCycle1);
+// console.log("Number 2! : " + testFaktorialCycle2);
+// console.log("Number 3! : " + testFaktorialCycle3);
+// console.log("Number 4! : " + testFaktorialCycle4);
+// console.log("Number 5! : " + testFaktorialCycle5);
+// console.log("Number 6! : " + testFaktorialCycle6);
 //
 // //----------Degree-------------
-// console.log("Degree, calculated by recursive");
-// var testDegree_0 = extentRecursion(0, -8);
-// var testDegree_8 = extentRecursion(2, -8);
-// var testDegree0 = extentRecursion(2, 0);
-// var testDegree8 = extentRecursion(2, 8);
-// console.log("0 to -8 degrees = " + testDegree_0);
-// console.log("2 to -8 degrees = " + testDegree_8);
-// console.log("2 to 0 degrees = " + testDegree0);
-// console.log("2 to 8 degrees = " + testDegree8);
+console.log("Degree, calculated by recursive");
+var testDegree_0 = extentRecursion(0, -8);
+var testDegree_8 = extentRecursion(2, -8);
+var testDegree0 = extentRecursion(2, 0);
+var testDegree8 = extentRecursion(2, 8);
+console.log("0 to -8 degrees = " + testDegree_0);
+console.log("2 to -8 degrees = " + testDegree_8);
+console.log("2 to 0 degrees = " + testDegree0);
+console.log("2 to 8 degrees = " + testDegree8);
+
+console.log("Degree, calculated by cycle");
+var testDegreeCycle_0 = extentCycle(0, -8);
+var testDegreeCycle_8 = extentCycle(2, -8);
+var testDegreeCycle0 = extentCycle(2, 0);
+var testDegreeCycle8 = extentCycle(2, 8);
+console.log("0 to -8 degrees = " + testDegreeCycle_0);
+console.log("2 to -8 degrees = " + testDegreeCycle_8);
+console.log("2 to 0 degrees = " + testDegreeCycle0);
+console.log("2 to 8 degrees = " + testDegreeCycle8);
+
 //
 // // ----------Sum Numbers-------------
 // console.log("Sum Numbers, calculated by recursive");
@@ -151,11 +162,11 @@ function factorialCycle(number) {
     if (number < 0) {
         result = undefined;
     }
-    else if (number === 0){
+    else if (number === 0) {
         result = 1;
     }
-    else if (number > 0){
-        for (var i = number -1; i > 1; i--) {
+    else if (number > 0) {
+        for (var i = number - 1; i > 1; i--) {
             result = result * i;
         }
     }
@@ -180,14 +191,33 @@ function extentRecursion(number, deg) {
     return res;
 }
 
-function extentCycle() {
-
+function extentCycle(number, deg) {
+    var result = number;
+    if (number === 0 && deg <= 0) {
+        result = undefined;
+    }
+    else if (deg === 0) {
+        result = 1;
+    }
+    else if (deg < 0) {
+        deg = deg * (-1);
+        for (i = 1; i < deg; i++) {
+            result = result * number;
+        }
+        result = 1 / result;
+    }
+    else {
+        for (i = 1; i < deg; i++) {
+            result = result * number;
+        }
+    }
+    return result;
 }
 
 function sumNumbersRecursion(number) {
     var res = 0;
-    if (number > 0){
-        res = (number % 10) + sumNumbersRecursion((number/10)^0);
+    if (number > 0) {
+        res = (number % 10) + sumNumbersRecursion((number / 10) ^ 0);
     }
     return res;
 }
@@ -200,26 +230,26 @@ function sumNunbersCycle() {
 function sumToRecursion(n) {
     var res = 0;
     if (n >= 1) {
-       res = n + sumToRecursion(n - 1);
+        res = n + sumToRecursion(n - 1);
     } else n = 0;
     return res;
 }
 
 function sumToCycle(n) {
     var res = 0;
-    for (var i = n; n > 0; n--){
+    for (var i = n; n > 0; n--) {
         res = res + n;
     }
     return res;
 }
 
 function sumToArithProgression(n) {
-    return (n + 1)/2*n;
+    return (n + 1) / 2 * n;
 }
 
 function fibRecursion(n) {
     var res;
-    if (n > 1){
+    if (n > 1) {
         res = fibRecursion(n - 1) + fibRecursion(n - 2);
     } else {
         res = n;
@@ -231,11 +261,11 @@ function fibCycle(n) {
     var num1 = 0;
     var num2 = 1;
     var num3;
-    for (var i = 0; i < n; i++){
+    for (var i = 0; i < n; i++) {
         num3 = num1 + num2;
         num1 = num2;
         num2 = num3;
-     }
+    }
     return num1;
 }
 
