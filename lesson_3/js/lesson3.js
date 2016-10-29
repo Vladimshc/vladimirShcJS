@@ -41,37 +41,48 @@
 // console.log("Number 6! : " + testFaktorialCycle6);
 //
 // //----------Degree-------------
-console.log("Degree, calculated by recursive");
-var testDegree_0 = extentRecursion(0, -8);
-var testDegree_8 = extentRecursion(2, -8);
-var testDegree0 = extentRecursion(2, 0);
-var testDegree8 = extentRecursion(2, 8);
-console.log("0 to -8 degrees = " + testDegree_0);
-console.log("2 to -8 degrees = " + testDegree_8);
-console.log("2 to 0 degrees = " + testDegree0);
-console.log("2 to 8 degrees = " + testDegree8);
-
-console.log("Degree, calculated by cycle");
-var testDegreeCycle_0 = extentCycle(0, -8);
-var testDegreeCycle_8 = extentCycle(2, -8);
-var testDegreeCycle0 = extentCycle(2, 0);
-var testDegreeCycle8 = extentCycle(2, 8);
-console.log("0 to -8 degrees = " + testDegreeCycle_0);
-console.log("2 to -8 degrees = " + testDegreeCycle_8);
-console.log("2 to 0 degrees = " + testDegreeCycle0);
-console.log("2 to 8 degrees = " + testDegreeCycle8);
+// console.log("Degree, calculated by recursive");
+// var testDegree_0 = extentRecursion(0, -8);
+// var testDegree_8 = extentRecursion(2, -8);
+// var testDegree0 = extentRecursion(2, 0);
+// var testDegree8 = extentRecursion(2, 8);
+// console.log("0 to -8 degrees = " + testDegree_0);
+// console.log("2 to -8 degrees = " + testDegree_8);
+// console.log("2 to 0 degrees = " + testDegree0);
+// console.log("2 to 8 degrees = " + testDegree8);
+//
+// console.log("Degree, calculated by cycle");
+// var testDegreeCycle_0 = extentCycle(0, -8);
+// var testDegreeCycle_8 = extentCycle(2, -8);
+// var testDegreeCycle0 = extentCycle(2, 0);
+// var testDegreeCycle8 = extentCycle(2, 8);
+// console.log("0 to -8 degrees = " + testDegreeCycle_0);
+// console.log("2 to -8 degrees = " + testDegreeCycle_8);
+// console.log("2 to 0 degrees = " + testDegreeCycle0);
+// console.log("2 to 8 degrees = " + testDegreeCycle8);
 
 //
 // // ----------Sum Numbers-------------
-// console.log("Sum Numbers, calculated by recursive");
-// var testNumber1 = sumNumbersRecursion(3742);
-// var testNumber2 = sumNumbersRecursion(12345678912);
-// var testNumber3 = sumNumbersRecursion(0);
-// var testNumber4 = sumNumbersRecursion(-1);
-// console.log("Number 3742, 3+7+4+2 = " + testNumber1);
-// console.log("Number 12345678912, 1+2+3+4+5+6+7+8+9+1+2 = " + testNumber2);
-// console.log("Number 0, = " + testNumber3);
-// console.log("Number -1 = " + testNumber4);
+console.log("Sum Numbers, calculated by recursive");
+var testNumber1 = sumNumbersRecursion(3742);
+var testNumber2 = sumNumbersRecursion(12345678912);
+var testNumber3 = sumNumbersRecursion(0);
+var testNumber4 = sumNumbersRecursion(-3742);
+console.log("Number 3742, 3+7+4+2 = " + testNumber1);
+console.log("Number 12345678912, 1+2+3+4+5+6+7+8+9+1+2 = " + testNumber2);
+console.log("Number 0, = " + testNumber3);
+console.log("Number -3742 = " + testNumber4);
+
+console.log("Sum Numbers, calculated by cycle");
+var testNumberCycle1 = sumNumbersCycle(3742);
+var testNumberCycle2 = sumNumbersCycle(12345678912);
+var testNumberCycle3 = sumNumbersCycle(0);
+var testNumberCycle4 = sumNumbersCycle(-3742);
+console.log("Number 3742, 3+7+4+2 = " + testNumberCycle1);
+console.log("Number 12345678912, 1+2+3+4+5+6+7+8+9+1+2 = " + testNumberCycle2);
+console.log("Number 0, = " + testNumberCycle3);
+console.log("Number -3742 = " + testNumberCycle4);
+
 //
 // // ----------Sum To-------------
 // console.log("Sum Numbers, 1 to N");
@@ -215,15 +226,34 @@ function extentCycle(number, deg) {
 }
 
 function sumNumbersRecursion(number) {
-    var res = 0;
-    if (number > 0) {
-        res = (number % 10) + sumNumbersRecursion((number / 10) ^ 0);
+    function sumNumRecursion(number) {
+        var result = 0;
+        if (number > 0) {
+            result = (number % 10) + sumNumbersRecursion((number / 10) ^ 0);
+        }
+        return result;
     }
-    return res;
+
+    if (number < 0) {
+        number = number * (-1);
+        return sumNumRecursion(number) * (-1);
+    } else return sumNumRecursion(number);
 }
 
-function sumNunbersCycle() {
+function sumNumbersCycle(number) {
+    function sumNumCycle(number) {
+        var numberStr = "" + number;
+        var result = 0;
+        for (var i = 0; i < numberStr.length; i++) {
+            result = result + Number(numberStr[i]);
+        }
+        return result;
+    }
 
+    if (number < 0) {
+        number = number * (-1);
+        return sumNumCycle(number) * (-1);
+    } else return sumNumCycle(number);
 }
 
 
