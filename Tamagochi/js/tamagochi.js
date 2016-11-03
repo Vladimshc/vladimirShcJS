@@ -6,7 +6,7 @@ function Animal(firstNeme) {
     this.firstNeme = firstNeme || "NoName";
 
     var timeTick = 10; // spped time, in seconds;
-    var timeTickCycle = 0;
+    var timeTickCycle = 1;
 
     var health = 20;
     var happiness = 40;
@@ -61,7 +61,7 @@ function Animal(firstNeme) {
 
     Animal.drink = function () {
         wantDrink = false;
-        health++
+        health++;
         return console.log("You " + firstNeme + " 'Drink'" );
     };
 
@@ -100,8 +100,10 @@ function Animal(firstNeme) {
     setInterval(Animal.printConsole, timeTick * 1000);
 }
 
-var askName = prompt("What is you tamagoci name?");
-var tamagochi = new Animal(askName);
+var askName = prompt("What is you tamagoci name?, Dont push 'Cancel'");
+if (askName != null) {
+    var tamagochi = new Animal(askName);
+} else console.log("No name, No Tamagochi :)");
 
 
 
