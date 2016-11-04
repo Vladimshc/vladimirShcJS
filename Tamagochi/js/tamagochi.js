@@ -3,7 +3,6 @@
  */
 
 function Animal(firstNeme) {
-    this.firstNeme = firstNeme || "NoName";
 
     var timeTick = 10; // spped time, in seconds;
     var timeTickCycle = 1;
@@ -27,14 +26,14 @@ function Animal(firstNeme) {
         if (wantEat && wantDrink && wantPlay && wantSleep) scoot = true;
         console.log("You animals name is \'" + firstNeme + "\' " +
             "\n\r" +
-            "\n\r'health'  = " + health +
-            "\n\r'happiness'  = " + happiness +
-            "\n\r'wantEat'  = " + wantEat +
-            "\n\r'wantDrink'  = " + wantDrink +
-            "\n\r'wantPlay'  = " + wantPlay +
-            "\n\r'wantSleep'  = " + wantSleep +
+            "\n\r'health' = " + health +
+            "\n\r'happiness' = " + happiness +
+            "\n\r'wantEat' = " + wantEat +
+            "\n\r'wantDrink' = " + wantDrink +
+            "\n\r'wantPlay' = " + wantPlay +
+            "\n\r'wantSleep' = " + wantSleep +
             "\n\r" +
-            "\n\r'timeTickCycle'  = " + timeTickCycle
+            "\n\r'timeTickCycle' = " + timeTickCycle
         );
     };
 
@@ -87,6 +86,10 @@ function Animal(firstNeme) {
         console.clear();
         if (health > 0 && !scoot) {
             Animal.printConsole = Animal.life();
+            if (wantEat) console.log("\t\r You must 'tamagochi.constructor.eat()'");
+            if (wantDrink) console.log("\t\r You must 'tamagochi.constructor.drink()'");
+            if (wantPlay) console.log("\t\r You must 'tamagochi.constructor.play()'");
+            if (wantSleep) console.log("\t\r You must 'tamagochi.constructor.sleep()'");
             timeTickCycle++;
         }
         else if (scoot) {
