@@ -55,12 +55,24 @@ var luckyNumberTests = [
 
 
 function luckyNumber(number) {
-    //TODO
+    var result = false;
+    var reg = /[47]/g;
+    var almostHappy = number.toString().match(reg);
+    if (almostHappy != null) {
+        var resL = almostHappy.length;
+        var strHappy = resL.toString().match(reg);
+        if (strHappy != null) {
+            if (resL.toString().length === strHappy.length) {
+                result = true;
+            }
+        }
+    }
+    return result;
 }
 
 
-tasks.push({
-    title: "Почти счастливое число",
-    solution: luckyNumber,
-    tests: luckyNumberTests
-});
+    tasks.push({
+        title: "Почти счастливое число",
+        solution: luckyNumber,
+        tests: luckyNumberTests
+    });
