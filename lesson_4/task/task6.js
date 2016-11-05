@@ -34,7 +34,15 @@ var prettyYearTests = [
 
 
 function prettyYear(y) {
-    //TODO
+    for (var i = ++y; i <= 9000; i++) {
+        var r0 = i.toString().charAt(0);
+        var r1 = i.toString().charAt(1);
+        var r2 = i.toString().charAt(2);
+        var r3 = i.toString().charAt(3);
+        if ((r0 != r1) && (r2 != r0) && (r3 != r0) && (r2 != r3) && (r1 != r3) && (r1 != r2)) {
+            return i;
+        }
+    }
 }
 
 
