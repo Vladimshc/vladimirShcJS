@@ -37,17 +37,24 @@ var doubleColaTests = [
     {
         parameters: [1802],
         expectedResult: "Penny"
+    },
+    {
+        parameters: [12345],
+        expectedResult: "Leonard"
     }
-    // },
-    // {
-    //     parameters: [12345],
-    //     expectedResult: "Leonard"
-    // }
 ];
 
 
 function doubleCola(n) {
-    //TODO
+    var line = ["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"];
+
+    for (var i = 0; i < n ; i++) {
+        var element = line.shift();
+        var pushed = line.push(element);
+        pushed = line.push(element);
+    }
+
+    return element;
 }
 
 
