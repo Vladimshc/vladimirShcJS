@@ -29,9 +29,37 @@ var dragonCountTests = [
     }
 ];
 
-
 function dragonCount(k, l, m, n, d) {
-    //TODO
+    var arrK = [];
+    var arrL = [];
+    var arrM = [];
+    var arrN = [];
+    var result = 0;
+
+    for (var i = 0; i < d; i++) {
+        arrK[i] = 0;
+        arrL[i] = 0;
+        arrM[i] = 0;
+        arrN[i] = 0;
+    }
+    for (var kk = k - 1; kk < d; kk = kk + k) {
+        arrK [kk] = 1;
+    }
+    for (var ll = l - 1; ll < d; ll = ll + l) {
+        arrL [ll] = 1;
+    }
+    for (var mm = m - 1; mm < d; mm = mm + m) {
+        arrM [mm] = 1;
+    }
+    for (var nn = n - 1; nn < d; nn = nn + n) {
+        arrN [nn] = 1;
+    }
+    for (var j = 0; j < d; j++) {
+        if ((arrK[j] || arrL[j] || arrM[j] || arrN[j]) === 1) {
+            result = result + 1;
+        }
+    }
+    return result;
 }
 
 
