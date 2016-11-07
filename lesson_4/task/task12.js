@@ -53,7 +53,15 @@ var fastMathTest = [
 
 
 function fastMath(a, b) {
-    //TODO
+    a.toString();
+    b.toString();
+    var result = [];
+    for (var i = 0; i < a.length; i++) {
+        if (a.charAt(i) != b.charAt(i)) {
+            result[i] = 1;
+        } else result[i] = 0;
+    }
+    return result.join("");
 }
 
 
