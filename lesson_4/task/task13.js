@@ -30,7 +30,10 @@ var chatTest = [
 
 
 function chat(s) {
-    //TODO
+    var reg = /h{1}.+e{1}.+l{2}.+o{1}/;
+    var resStr = reg.test(s);
+
+    return resStr.toString();
 }
 
 
