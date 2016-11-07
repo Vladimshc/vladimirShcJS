@@ -103,9 +103,10 @@ function Animal(firstNeme) {
     setInterval(Animal.printConsole, timeTick * 1000);
 }
 
-var askName = prompt("What is you tamagoci name?, Dont push 'Cancel'");
+var askName = prompt("What is you tamagoci name? If you press 'Cancel' - do not get animal:))");
 if (askName != null) {
     var tamagochi = new Animal(askName);
+    console.log("Please, wait one tick game")
 } else console.log("No name, No Tamagochi :)");
 
 
