@@ -31,7 +31,18 @@ var firstStepsTests = [
 
 
 function firstSteps(arr) {
-    //TODO
+    var result = [];
+
+    for (var k = 0; k < arr.length; k++ ){
+        result[k] = 1;
+    }
+    for (var i = 0, j = 0 ; i < arr.length; i++){
+        if (arr[i + 1] >= arr[i]) {
+            result[j] = 1 + result[j];
+        } else j++;
+    }
+    result.sort();
+    return result[result.length - 1];
 }
 
 
