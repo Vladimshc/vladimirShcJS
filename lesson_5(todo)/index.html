@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>ToDoList</title>
+    <link href="./css/style.css" rel="stylesheet" >
 </head>
 <body>
-$END$
+    <header>
+        <h2><a href="../index.html">Return to main pages</a></h2>
+        <h1>Lesson_5</h1>
+    </header>
+    <main>
+        <div class="part1"></div>
+
+        <div id="list"></div>
+
+        <div class="part2">
+            <input name="todo" type="text" id="input" placeholder="You task">
+        </div>
+
+        <div class="part3">
+            <button id="addButton" class="btn" onclick="addInput()">Add</button>
+            <button class="btn" onclick="remove()">Remove</button>
+            <button class="btn" onclick="done()">Done</button>
+            <button class="btn" onclick="archive()">Archive</button>
+        </div>
+
+    </main>
+    <script src="js/todolist.js"></script>
 </body>
 </html>

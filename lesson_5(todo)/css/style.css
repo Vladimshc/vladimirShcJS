@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: opensans, Arial, serif;
+
+}
+body{
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+}
+header{
+    padding: 20px 50px;
+    text-align: center;
+}
+
+main{
+    text-align: center;
+    min-height: 700px;
+}
+.part1{
+    background: url("../images/part11.png") no-repeat;
+    background-position: center ;
+    height: 134px;
+}
+.part2{
+    background: url("../images/part21.png") no-repeat;
+    background-position: center ;
+    height: 20px;
+}
+
+.part3{
+    background: url("../images/part31.png") no-repeat;
+    background-position: center ;
+    height: 181px;
+}
+
+input[type="text"]{
+    background: url("../images/part21.png") no-repeat;
+    background-position: center ;
+    height: 16px;
+    width: 500px;
+    border: none;
+}
+
+.btn{
+    display: inline-block;
+    margin: 100px 5px 0px 10px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font: 18px/18px Arial, sant-serif;
+    background: #E1E0D5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.done{
+    background: url("../images/part21_done.png") no-repeat;
+    background-position: center ;
+    height: 20px;
+}
+
+.archiv{
+    background: url("../images/part21_done_archiv.png") no-repeat;
+    background-position: center ;
+    height: 20px;
+}
+
