@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: opensans, Arial, serif;
+}
+body{
+}
+header{
+    background: url("../images/header_bg.png") repeat-x;
+    height: 156px;
+    text-align: center;
+}
+#geekHubJS6 {
+    background: url("../images/geekhubJs6.png") no-repeat center;
+    height: 57px;
+    padding-top: 10px;
+}
+header h2{
+    margin-top: 40px;
+}
+
+header h2 a{
+    color: #E5E5E5;
+}
+
+main{
+    background: url("../images/background1920x1080.jpg") no-repeat;
+    background-size: cover;
+    min-width: 660px;
+    min-height: 1080px;
+    text-align: center;
+}
+h1{
+    font: 30px/24px Arial, center;
+    color: #1F1F1F;
+    padding-top: 20px;
+}
+
+p{
+    font: 24px/24px Arial, center;
+    color: #1F1F1F;
+    margin: 10px;
+}
+
+#table{
+    margin: 20px 300px;
+    text-align: center;
+
+}
+.class-x{
+    width: 32px;
+    float: left;
+}
+.brown{
+    background: url("../images/brown.png") no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.blue{
+    background: url("../images/blue.png") no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+input[type="text"]{
+    font: 18px/18px Arial, sant-serif;
+    height: 30px;
+    width: 500px;
+}
+
+.btn{
+    display: inline-block;
+    margin: 30px 5px 30px 10px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font: 18px/18px Arial, sant-serif;
+    background: #E1E0D5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+footer{
+    background: url("../images/footer_bg.png") repeat-x;
+    height: 72px;
+    text-align: center;
+}
+
+footer p{
+    font: 14px/14px Arial, sans-serif;
+    color: #E5E5E5;
+    padding-top: 15px;
+}
+footer p a{
+    color: #E5E5E5;
+}
+
