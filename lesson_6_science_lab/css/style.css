@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+@font-face {
+    font-family: MyriadProRegular;
+    src: url(../fonts/MyriadProRegular.otf);
+}
+@font-face {
+    font-family: HelveticaNeueLTPro-BdEx;
+    src: url(../fonts/HelveticaNeueLTPro-BdEx.otf);
+}
+@font-face {
+    font-family: HelveticaNeueLTPro-ThEx;
+    src: url(../fonts/HelveticaNeueLTPro-ThEx.otf);
+}
+
+body{
+    width: 675px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.logo{
+    background: url('../images/header_bg.png') repeat-x;
+    height: 80px;
+}
+.logo a img{
+    margin-top: 25px ;
+    margin-left: 35px ;
+}
+
+nav ul {
+    height: 75px;
+}
+
+nav ul li{
+    display: table-cell;
+    width: auto;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+nav ul li a{
+    font: 16pt/16pt MyriadProRegular;
+    color: #093500;
+    display: table-cell;
+    width: 675px;
+    height: 75px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #80a60f;
+}
+
+.block1{
+    background: #eeeefb;
+    height: 190px;
+}
+
+#block1Img1{
+    float: left;
+    background: url("../images/flask.png") no-repeat;
+    margin-left: 50px;
+    height: 190px;
+    width: 256px;
+}
+h1{
+    font: 22pt/22pt HelveticaNeueLTPro-ThEx;
+    color: #093500;
+    position: absolute;
+    margin-left: 280px;
+    margin-top: 30px;
+}
+h1 span{
+    font: 22pt/22pt HelveticaNeueLTPro-BdEx;
+}
+
+.content1{
+    padding: 80px 25px 5px 325px;
+}
+h3{
+    font: 10pt/10pt bold Tahoma ;
+    color: #80a60f;
+    padding-bottom: 4px;
+}
+p{
+    font: 7pt/7pt Tahoma;
+    color: #093500;
+    line-height: 140%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+.block2{
+    clear: both;
+}
+
+.content2{
+    float: left;
+    width: 200px;
+    padding: 20px 30px 0 30px;
+    background: url("../images/lineY.png")  no-repeat right center;
+}
+h2{
+    font: 16pt/16pt MyriadProRegular;
+    color: #093500;
+    padding-bottom: 15px;
+}
+
+.content3{
+    float: right;
+    width: 390px;
+    padding-top: 20px ;
+    padding-left: 25px;
+}
+
+.block5{
+    background: url("../images/lineX.png") no-repeat bottom center;
+    height: 110px;
+    width: 390px;
+}
+
+#researchersImg{
+     background: url("../images/researchers.png") no-repeat;
+     width: 141px;
+     height: 94px;
+     float: left;
+ }
+#researchersContent{
+    float: right;
+    width: 235px;
+}
+
+.block6{
+    padding-top: 17px;
+}
+#servicesImg{
+    background: url("../images/services.png") no-repeat;
+    width: 141px;
+    height: 94px;
+    float: left;
+}
+#servicesContent{
+    float: right;
+    width: 235px;
+    padding-bottom: 15px;
+}
+#lineX{
+    clear: both;
+    background: url("../images/line_2px_5px.png") repeat-x;
+    height: 5px;
+    width: 675px;
+}
+
+footer{
+    padding: 30px;
+}
+
