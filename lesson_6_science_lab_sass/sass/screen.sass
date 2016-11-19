@@ -1,0 +1,209 @@
+@import "compass/reset"
+
+@font-face
+  font-family: MyriadProRegular
+  src: url(../fonts/MyriadProRegular.otf)
+
+@font-face
+  font-family: HelveticaNeueLTPro-BdEx
+  src: url(../fonts/HelveticaNeueLTPro-BdEx.otf)
+
+@font-face
+  font-family: HelveticaNeueLTPro-ThEx
+  src: url(../fonts/HelveticaNeueLTPro-ThEx.otf)
+
+
+=h1_font
+  font: 22pt HelveticaNeueLTPro-ThEx
+  color: #093500
+
+=h1_span
+  font: 22pt/22pt HelveticaNeueLTPro-BdEx
+  color: #093500
+
+=h2_font
+  font: 16pt/16pt MyriadProRegular
+  color: #093500
+
+=h3_font
+  font: 10pt/10pt bold Tahoma
+  color: #80a60f
+
+=a_menu
+  a
+    font: 16pt MyriadProRegular
+    color: #093500
+    &:hover
+      color: #80a60f
+    &:active
+      color: #0388f9
+
+=p_font
+  font: 7.5pt/7.5pt Tahoma
+  color: #093500
+  line-height: 140%
+
+body
+  background-color: #ffffff
+  width: 675px
+  margin: 0 auto
+
+//----------------Header-----------------
+#header
+  background: url("../images/header_bg.png") repeat-x
+  height: 80px
+
+#logo
+  position: absolute
+  background: url("../images/logo.png") no-repeat
+  width: 200px
+  height: 25px
+  margin: 27px 35px
+
+//----------------main------------------
+//----menu----
+.primary-menu
+  height: 80px
+
+
+.primary-menu ul li
+  display: table-cell
+  width: auto
+  text-align: center
+  list-style: none
+  padding: 0px 10px
+  +a_menu
+
+.primary-menu ul li:last-child
+  padding-right: 35px
+
+.primary-menu ul li a
+
+  display: table-cell
+  width: 675px
+  height: 80px
+  text-decoration: none
+  line-height: 80px
+
+//----content 1----
+
+#wrapper1
+  background: #eeeefb
+  height: 190px
+
+#wrapper1_img
+  background: url("../images/flask.png")
+  width: 256px
+  height: 190px
+  margin-left: 50px
+  float: left
+
+#wrapper1 h1
+  +h1_font
+  position: absolute
+  padding: 30px 25px 25px 270px
+  min-width: 300px
+
+#wrapper1 h1 span
+  +h1_span
+
+#content1
+  padding-left: 320px
+  padding-right: 30px
+#wrapper1 h3
+  +h3_font
+  padding-top: 80px
+
+#wrapper1 p
+  +p_font
+  padding-top: 3px
+  padding-bottom: 15px
+
+.arrow
+  background: url("../images/arrow2.png")
+  height: 9px
+  width: 13px
+
+//----content 2----
+.clear
+  clear: both
+
+.wrapper2
+  width: 210px
+  padding: 20px 25px 15px 25px
+  background: url("../images/lineY.png") no-repeat right center
+  float: left
+
+.wrapper2 h2
+  +h2_font
+  padding-bottom: 15px
+
+.wrapper2 h3
+  +h3_font
+  padding-top: 3px
+
+.wrapper2 p
+  +p_font
+  margin-bottom: 1em
+
+//----content 3----
+.wrapper3
+  padding: 18px 20px 22px 19px
+  float: left
+  width: 372px
+
+.content3
+  background: url("../images/lineX.png") no-repeat bottom center
+  height: 110px
+
+.content3 img
+  float: left
+
+.content3 h2
+  +h2_font
+  padding-left: 141 + 21 + px
+
+.content3 h3
+  +h3_font
+  padding-left: 141 + 21 + px
+  padding-top: 15px
+
+.content3 p
+  +p_font
+  padding-left: 141 + 21 + px
+
+
+//----content 4----
+.content4
+  padding-top: 17px
+  height: 116px
+
+.content4 img
+  float: left
+
+.content4 h2
+  +h2_font
+  padding-left: 141 + 21 + px
+
+.content4 h3
+  +h3_font
+  padding-left: 141 + 21 + px
+  padding-top: 15px
+
+.content4 p
+  +p_font
+  padding-left: 141 + 21 + px
+
+//-------------------footer--------------------
+
+footer
+  clear: both
+  background: url("../images/line_2px_5px.png") repeat-x top
+  height: 70px
+  +p_font
+
+footer p
+  padding-left: 25px
+  padding-top: 28px
+
+
