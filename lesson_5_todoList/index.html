@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link href="./css/style.css" rel="stylesheet" >
+</head>
+<body>
+    <header>
+        <div id="geetHubJS6"></div>
+        <h2><a href="../index.html">Return to main pages</a></h2>
+    </header>
+    <main>
+        <h1>Lesson 5</h1>
+        <div class="wrapper">
+            <div class="part1"></div>
+
+            <div id="list"></div>
+
+            <div class="part2">
+                <input name="todo" type="text" id="input" placeholder="Input you task or select added task">
+            </div>
+
+            <div class="part3">
+                <div class="button_position1">
+                    <button id="addButton" class="btn" onclick="addInput()">Add</button>
+                    <button class="btn" onclick="remove()">Remove</button>
+                    <button class="btn" onclick="done()">Done</button>
+                    <button class="btn" onclick="archive()">Archive</button>
+                </div>
+                <div class="button_position2">
+                    <button class="btn" onclick="taskList()">Task List</button>
+                    <button class="btn" onclick="archiveList()">Archive List</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Volodymyr Shcherbyna <a href="mailto:vladimshc@gmail.com">vladimshc@gmail.com</a></p>
+        <p>Learn js 2016-2017</p>
+    </footer>
+    <script src="js/todolist.js"></script>
+</body>
+</html>
