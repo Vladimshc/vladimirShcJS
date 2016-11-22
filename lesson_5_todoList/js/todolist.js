@@ -33,6 +33,11 @@ function onclick(mouseEv) {
         var data = mouseEv.toElement.innerText;
         var input = document.getElementById("input");
         input.value = data;
+        document.getElementById(id).classList.add("onfocus");
+
+
+
+
         buttonModToEdit();
     }
 }
