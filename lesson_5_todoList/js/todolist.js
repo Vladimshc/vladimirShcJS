@@ -42,21 +42,11 @@ function addInput() {
     var input = document.getElementById("input");
     if (input.value) {
         if (buttonMode === "Add") {
-            var task =  document.getElementById("list");
-            var createDiv = document.createElement("div");
-            createDiv.innerText = input.value;
-            createDiv.id = "idDiv" + countDiv;
-            createDiv.classList.add("part2");
-            createDiv.onclick = onclick;
-            task.appendChild(createDiv);
             arrTask[countDiv]= input.value;
             countDiv++;
-            clearInput();
+            taskList();
         }
         else if (buttonMode === "Edit") {
-            var edit =  document.getElementById(id);
-            edit.innerText = input.value;
-
             var idNumberEdit;
             if(id.substring(0, 5) === "idDiv") {
                 idNumberEdit = id.substring(5);
@@ -66,8 +56,7 @@ function addInput() {
                 idNumberEdit = id.substring(9);
                 arrDone[idNumberEdit]= input.value;
             }
-            clearInput();
-            buttonModToAdd();
+            taskList();
         }
     } else {
         alert("Write task to input");
@@ -98,16 +87,10 @@ function remove() {
 function done() {
     var input = document.getElementById("input");
     if (input.value) {
-        var done = document.getElementById(id);
-        done.classList.remove("part2");
-        done.classList.add("done");
-        done.id = "done" + id;
-
         var idNumber = id.substring(5);
-        arrDone[idNumber]= done.innerText;
+        arrDone[idNumber]= arrTask[idNumber];
         arrTask[idNumber]= null;
-        buttonModToAdd();
-        clearInput();
+        taskList();
     } else {
         alert("Choose task");
     }
@@ -153,6 +136,7 @@ function archiveList () {
 function taskList() {
     clearList();
     clearInput();
+    buttonModToAdd();
     var list = document.getElementById("list");
 
     for (var i = 0; i < arrDone.length; i++) {
@@ -182,8 +166,12 @@ function up() {
         if(id.substring(0, 5) === "idDiv") {
             var idNumberUp = Number(id.substring(5));
             if (idNumberUp > 0){
-                var buffer = arrTask[idNumberUp - 1];
-                arrTask[idNumberUp - 1] = arrTask[idNumberUp];
+                var indexUp = idNumberUp - 1;
+                while (!arrTask[indexUp]){
+                    indexUp = indexUp - 1;
+                }
+                var buffer = arrTask[indexUp];
+                arrTask[indexUp] = arrTask[idNumberUp];
                 arrTask[idNumberUp] = buffer;
                 taskList();
                 id = null;
@@ -198,8 +186,12 @@ function down() {
         if(id.substring(0, 5) === "idDiv") {
             var  idNumberDown = Number(id.substring(5));
             if (idNumberDown < arrTask.length - 1){
-                var buffer = arrTask[idNumberDown + 1];
-                arrTask[idNumberDown + 1] = arrTask[idNumberDown];
+                var indexDown = idNumberDown + 1;
+                while (!arrTask[indexDown]){
+                    indexDown = indexDown + 1;
+                }
+                var buffer = arrTask[indexDown];
+                arrTask[indexDown] = arrTask[idNumberDown];
                 arrTask[idNumberDown] = buffer;
                 taskList();
                 id = null;
