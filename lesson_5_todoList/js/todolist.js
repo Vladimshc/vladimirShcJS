@@ -177,5 +177,35 @@ function taskList() {
     }
 }
 
+function up() {
+    if(id) {
+        if(id.substring(0, 5) === "idDiv") {
+            var idNumberUp = Number(id.substring(5));
+            if (idNumberUp > 0){
+                var buffer = arrTask[idNumberUp - 1];
+                arrTask[idNumberUp - 1] = arrTask[idNumberUp];
+                arrTask[idNumberUp] = buffer;
+                taskList();
+                id = null;
+            }
+        }
+    } else alert("Choose task");
+}
+
+
+function down() {
+    if(id) {
+        if(id.substring(0, 5) === "idDiv") {
+            var  idNumberDown = Number(id.substring(5));
+            if (idNumberDown < arrTask.length - 1){
+                var buffer = arrTask[idNumberDown + 1];
+                arrTask[idNumberDown + 1] = arrTask[idNumberDown];
+                arrTask[idNumberDown] = buffer;
+                taskList();
+                id = null;
+            }
+        }
+    } else alert("Choose task");
+}
 
 
