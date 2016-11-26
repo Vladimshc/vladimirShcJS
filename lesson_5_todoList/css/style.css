@@ -48,9 +48,19 @@ h1{
     background-position: center ;
     height: 134px;
 }
+
+#list{
+    background: url("../images/part21.png") repeat-y;
+    background-size: contain
+
+}
 .part2{
+    text-align: left;
+    padding: 0px 60px;
+    line-height: 20px;
+}
+.part2-input{
     background: url("../images/part21.png") no-repeat;
-    background-position: center ;
     height: 20px;
 }
 
@@ -94,23 +104,16 @@ input[type="text"]{
 
 .done{
     background: url("../images/part21_done.png") no-repeat;
-    background-position: center ;
-    height: 20px;
-    display: block;
-}
-
-.archiv{
-    background: url("../images/part21_done_archiv.png") no-repeat;
-    background-position: center ;
-    height: 20px;
-    visibility: hidden;
+    text-align: left;
+    padding: 0px 60px;
+    line-height: 20px;
 }
 
 .archivVisible{
     background: url("../images/part21_done_archiv.png") no-repeat;
-    background-position: center ;
-    height: 20px;
-    visibility: visible
+    text-align: left;
+    padding: 0px 90px;
+    line-height: 20px;
 }
 
 footer{
