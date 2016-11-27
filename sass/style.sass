@@ -1,13 +1,15 @@
 @import "compass/reset"
 
 =transition-animation
-  -webkit-transition: all .2s ease-in-out 0s
-  -moz-transition: all .2s ease-in-out 0s
-  -o-transition: all .2s ease-in-out 0s
+  -webkit-transition: all .5s ease-in-out 0s
+  -moz-transition: all .5s ease-in-out 0s
+  -o-transition: all .5s ease-in-out 0s
   transition-property: all
-  transition-duration: .2s
+  transition-duration: .5s
   transition-timing-function: ease-in-out
   transition-delay: 0s
+
+
 
 //-----------------body----------------------//
 body
@@ -50,6 +52,7 @@ main
 .nav ul li
   background: #1195D5
   margin: 1px
+  +transition-animation
 
 .nav ul li:last-child
   border-bottom-right-radius: 20px
@@ -71,7 +74,7 @@ main
   text-decoration: none
   font-family: 'PT Sans', Tahoma, Arial
   font-size: 1em
-  +transition-animation
+
 
 //--//-----------block-2-----------------------//
 #block-2

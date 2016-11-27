@@ -81,7 +81,14 @@ main {
 
 .nav ul li {
   background: #1195D5;
-  margin: 1px; }
+  margin: 1px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; }
 
 .nav ul li:last-child {
   border-bottom-right-radius: 20px; }
@@ -102,14 +109,7 @@ main {
   cursor: pointer;
   text-decoration: none;
   font-family: "PT Sans", Tahoma, Arial;
-  font-size: 1em;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  -o-transition: all 0.2s ease-in-out 0s;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s; }
+  font-size: 1em; }
 
 #block-2 {
   height: 428px;
