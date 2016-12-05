@@ -1,0 +1,115 @@
+$font-stack: 24px/24px Arial
+
+.wrapper-content
+  width: 800px
+  margin: 0 auto
+
+#list
+  font: $font-stack
+
+.task
+  position: relative
+  margin-top: 3px
+  min-height: 50px
+  line-height: 50px
+  background: url("../img/check-box-0.png") no-repeat left center, #FDFEFE
+  background-position: 0px 5px
+  border-bottom: 2px solid #EDEDED
+
+.task:active
+  background: #d5ffcc
+
+.task:hover .close
+  display: block
+
+.close
+  display: none
+  position: absolute
+  right: 0px
+  top: 0px
+  height: 50px
+  width: 50px
+  text-align: center
+  color: #cecece
+
+.close:hover
+  background: #ff2800
+  color: #ffffff
+
+.select
+  background: #61a161
+
+.done
+  text-decoration: line-through
+  background: url("../img/check-box-1.png") no-repeat left center, #FDFEFE
+  background-position: 0px 5px
+
+.wrapper-button
+  padding: 20px 0px
+
+.count
+  float: left
+  font: 14px/14px Arial
+  padding: 0 20px 0 30px
+  height: 80px
+  line-height: 40px
+
+#count-tasks
+  font: 16px/16px Arial
+  padding: 0 5px 0 5px
+
+.btn
+  height: 40px
+  line-height: 40px
+  padding: 0px 10px
+  margin: 0px
+  border: none
+  background: #FDFEFE
+  font: $font-stack
+  color: #cecece
+  cursor: pointer
+
+.btn:hover
+  border: 2px solid #EDEDED
+  border-radius: 5px
+
+.btn:last-child
+  float: right
+  margin-right: 40px
+
+.btn:first-child
+  margin-left: 50px
+
+.btn-blok-1:last-child
+  float: right
+
+.check-box
+  width: 30px
+  height: 49px
+  display: block
+  float: left
+  margin-right: 20px
+  cursor: pointer
+
+.edit-box
+  margin: 0px 0px 0px 50px
+  width: 93%
+  font: $font-stack
+  padding: 7px 0px
+
+#input
+  font: $font-stack
+  padding: 15px 0px
+  width: 80%
+  border: none
+
+#add-button
+  width: 19.5%
+  padding: 0
+  margin: 0
+  border: none
+  background: #ff2800
+  font: $font-stack
+  color: #ffffff
+  height: 58px
+  cursor: pointer

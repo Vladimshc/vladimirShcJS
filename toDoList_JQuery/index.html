@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>toDoList_JQuery</title>
+    <meta name="description" content="Volodymyr Shcherbyna test page for learn java script on geekhub">
+    <meta name="keywords" content="Volodymyr, Shcherbyna, geekhub, js, java script, test page, learn">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Volodymyr Shcherbyna vladimshc@gmail.com">
+    <link rel="stylesheet" href="../sass/style.css">
+    <link rel="stylesheet" href="./sass/style-todolist-jquery.css">
+</head>
+<body>
+<header>
+    <a href="http://geekhub.ck.ua/" id="logo"></a>
+</header>
+
+<main>
+    <!--<section id="block-1">-->
+        <!--<nav class="nav">-->
+            <!--<ul>-->
+                <!--<li><a href="../lesson_1/index.html">Lesson 1</a></li>-->
+                <!--<li><a href="../lesson_2/index.html">Lesson 2</a></li>-->
+                <!--<li><a href="../lesson_3/index.html">Lesson 3</a></li>-->
+                <!--<li><a href="../lesson_4/index.html">Lesson 4</a></li>-->
+                <!--<li><a href="../Tamagochi/index.html">Tamagochi</a></li>-->
+                <!--<li><a href="../lesson_5_todoList/index.html">Lesson 5 ToDo List</a></li>-->
+                <!--<li><a href="../lesson_5.2/index.html">Lesson 5.2 Watter</a></li>-->
+                <!--<li><a href="../lesson_6_science_lab/index.html">lesson 6 science lab</a></li>-->
+                <!--<li><a href="../lesson_6_science_lab_sass/index.html">lesson 6 science lab SASS</a></li>-->
+                <!--<li><a href="../lesson_6_science_lab_sass/index.html">lesson 6 science lab SASS</a></li>-->
+                <!--<li><a href="../some_next_page/index-next.html">Some next test page</a></li>-->
+                <!--<li><a href="../toDoList_JQuery/index.html">toDoList JQuery</a></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+    <!--</section>-->
+    <section id="block-2">
+        <h1 id="h11">toDoList JQuery</h1>
+        <div class="wrapper-content">
+            <input name="todo" type="text" id="input" placeholder="Input you task, click 'Add' or press 'Enter'">
+            <button id="add-button" onclick="add()">Add</button>
+
+            <div id="list"></div>
+
+            <div class="wrapper-button">
+                <div class="count"><span id="count-tasks"></span> items left</div>
+                <div class="btn-blok-1">
+                    <button class="btn" onclick="printTasks(true, true)">All</button>
+                    <button class="btn" onclick="printTasks(true, false)">Active</button>
+                    <button class="btn" onclick="printTasks(false, true)">Completed</button>
+                    <button class="btn" onclick="clearCompleted()">Clear completed</button>
+                </div>
+                <div>
+                    <button class="btn">Up??</button>
+                    <button class="btn">Down??</button>
+                    <button class="btn" onclick="clearLocalStorage()">Clear local storage</button>
+                  </div>
+            </div>
+        </div>
+
+
+    </section>
+</main>
+
+<footer>
+    <p>Volodymyr Shcherbyna <a href="mailto:vladimshc@gmail.com">vladimshc@gmail.com</a></p>
+    <p>Learn js 2016-2017</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="./js/todolist-jquery.js"></script>
+
+</body>
+</html>
