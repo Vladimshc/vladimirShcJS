@@ -59,6 +59,8 @@ $(document).ready(function () {
     });
     $(document).on("dblclick", ".task", edit);
     $(document).on("click", ".check-box", toggle);
+    $(document).on("click", ".task", drag);
+
 
 });
 
@@ -128,3 +130,15 @@ printTasks(true, true);
 //     event.target.classList.add("select");
 // }
 
+
+var drag = $(function() {
+
+    $('.task').draggable({
+        axis: "y",
+        containment: "parent",
+        grid: [800,52],
+        delay: 300,
+        distance: 52,
+    });
+
+});
