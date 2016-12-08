@@ -1,42 +1,53 @@
 var countTasks = 0;
+var windowData = [];
+
+var taskList = {
+    stor: function (name, data) {
+        if (arguments.length > 1) {
+            return window.localStorage.setItem(name, JSON.stringify(data));
+        } else {
+            var stor = window.localStorage.getItem(name);
+            return (JSON.parse(stor)) || [];
+        }
+    }
+};
 
 function add() {
     var input = $('#input').val();
     if (input != "") {
-        var storage = window.localStorage;
-        if (!storage.indexCount) {
-            storage.indexCount = 0;
-        }
-        storage.indexCount = parseInt(storage.indexCount, 10) + 1;
-        storage.setItem(storage.indexCount, input);
+        var data = {};
+        data.value = input;
+        data.completed = false;
+        windowData.push(data);
+        taskList.stor("tasksJson", windowData);
+
         $('#input').val("");
         printTasks(true, true);
     }
 }
 
-function printTasks(active, completed) {
+function printTasks(active, complet) {
     $('#list').empty();
-    countTasks = 0;
-    var storage = window.localStorage;
-    var indexCount = parseInt(storage.indexCount, 10);
-    for (var i = 1; i <= indexCount; i++){
-        if (storage[i] != null) {
-            var data = storage.getItem(i);
-            var id = "id='" + i + "'";  // wtf same id in 3 elements!!! but its work :))))
 
-            if((data.substring(0, 4)==="done") && completed){
-                var dataPrint = data.substring(5);
-                $('#list').append("<div class='task done' "+ id +"><span class='check-box' " + id + "></span>" + dataPrint +
+    windowData = taskList.stor("tasksJson");
+    countTasks = 0;
+    for (var i = 0; i < windowData.length; i++){
+        if (windowData[i].value != null) {
+            var id = "id='" + i + "'";  // wtf same id in 3 elements!!! but its work :))))
+            if((windowData[i].completed) && complet){
+                $('#list').append("<div class='task done' "+ id +"><span class='check-box' " + id + "></span>" + windowData[i].value +
                     "<span class='close' " + id + ">x</span>" + "</div>");
             }
-            if((data.substring(0, 4)!=="done") && active){
+            if((!windowData[i].completed) && active){
                 countTasks++;
-                $('#list').append("<div class='task' "+ id +"><span class='check-box' " + id + "></span>" + data +
+                $('#list').append("<div class='task' "+ id +"><span class='check-box' " + id + "></span>" + windowData[i].value +
                     "<span class='close' " + id + ">x</span>" + "</div>");
             }
         }
     }
     $('#count-tasks').text(countTasks);
+
+
 }
 
 function clealList() {
@@ -59,29 +70,27 @@ $(document).ready(function () {
     });
     $(document).on("dblclick", ".task", edit);
     $(document).on("click", ".check-box", toggle);
-    $(document).on("click", ".task", drag);
-
-
+    // $(document).on("click", ".task", drag);
 });
 
 function delTask(event) {
-    var delId =  event.target.id;
-    window.localStorage.removeItem(delId);
+    var delId =  parseInt(event.target.id, 10);
+    windowData.splice(delId, 1);
+    taskList.stor("tasksJson", windowData);
     printTasks(true, true);
 }
 
 
-
 function edit(event) {
     var id =  event.target.id;
-    var oldData = window.localStorage.getItem(id);
     $("#" + id).html("")
-        .html("<input type=\"text\" class=\"edit-box\" value=\"" + oldData + "\" />")
+        .html("<input type=\"text\" class=\"edit-box\" value=\"" + windowData[id].value + "\" />")
         .unbind('dblclick', edit);
 
     $(("#" + id)).keyup(function (event) {
         if(event.keyCode == 13) {
-            window.localStorage.setItem(id, $(".edit-box")[0].value);
+            windowData[id].value = $(".edit-box")[0].value;
+            taskList.stor("tasksJson", windowData);
             printTasks(true, true);
         }
         if(event.keyCode == 27) {
@@ -92,35 +101,29 @@ function edit(event) {
 
 function toggle(event) {
     var id =  event.target.id;
-    var data = window.localStorage.getItem(id);
-    if(data.substring(0, 4)!=="done") {
-        var dataSet = "done " + data;
-        window.localStorage.setItem(id, dataSet);
+    if(!windowData[id].completed) {
+        windowData[id].completed = true;
         countTasks--;
     } else {
-        var dataSet = data.substring(5);
-        window.localStorage.setItem(id, dataSet);
+        windowData[id].completed = false;
+        countTasks++;
     }
+    taskList.stor("tasksJson", windowData);
     printTasks(true, true);
 }
 
 function clearCompleted() {
     $('#list').empty();
-    var storage = window.localStorage;
-    var indexCount = parseInt(storage.indexCount, 10);
-    for (var i = 1; i <= indexCount; i++){
-        if (storage[i] != null) {
-            var data = storage.getItem(i);
-            var id = "id='" + i + "'";
-
-            if(data.substring(0, 4)==="done"){
-                window.localStorage.removeItem(i);
-            } else {
-                //do nothing
-            }
+    var i = 0;
+    while ( i < windowData.length){
+        if (windowData[i].completed) {
+            windowData.splice(i, 1);
+        } else {
+            i++;
         }
     }
-    printTasks(true, false);
+    taskList.stor("tasksJson", windowData);
+    printTasks(true, true);
 }
 
 printTasks(true, true);
@@ -131,14 +134,14 @@ printTasks(true, true);
 // }
 
 
-var drag = $(function() {
-
-    $('.task').draggable({
-        axis: "y",
-        containment: "parent",
-        grid: [800,52],
-        delay: 300,
-        distance: 52,
-    });
-
-});
+// var drag = $(function() {
+//
+//     $('.task').draggable({
+//         axis: "y",
+//         containment: "parent",
+//         grid: [800,52],
+//         delay: 300,
+//         distance: 52,
+//     });
+//
+// });
