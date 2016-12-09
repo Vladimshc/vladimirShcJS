@@ -46,8 +46,6 @@ function printTasks(active, complet) {
         }
     }
     $('#count-tasks').text(countTasks);
-
-
 }
 
 function clealList() {
@@ -64,13 +62,12 @@ function clearLocalStorage() {
 
 $(document).ready(function () {
     $(document).on("click", ".close", delTask);
-    // $(document).on("click", ".task", select);  // ------- dont used
     $('#input').keyup(function (event) {
         if(event.keyCode == 13) add();
     });
     $(document).on("dblclick", ".task", edit);
     $(document).on("click", ".check-box", toggle);
-    // $(document).on("click", ".task", drag);
+    $("#list").sortable();
 });
 
 function delTask(event) {
@@ -128,20 +125,3 @@ function clearCompleted() {
 
 printTasks(true, true);
 
-//-------------- dont used ------//
-// function select(event) {
-//     event.target.classList.add("select");
-// }
-
-
-// var drag = $(function() {
-//
-//     $('.task').draggable({
-//         axis: "y",
-//         containment: "parent",
-//         grid: [800,52],
-//         delay: 300,
-//         distance: 52,
-//     });
-//
-// });
