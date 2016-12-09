@@ -1,3 +1,14 @@
+
+
+$width-col-1: 333px
+$col-1-margin-right: 40px
+$width-col-2: 250px
+$width-wrapper: $width-col-1 + $col-1-margin-right + $width-col-2
+$main-min-width: $width-wrapper + 60px
+
+=font
+  font: 18px/18px "PT Sans", Tahoma, Arial
+
 =transition-animation
   -webkit-transition: all .5s ease-in-out 0s
   -moz-transition: all .5s ease-in-out 0s
@@ -18,7 +29,7 @@
   -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4),inset 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
 
 main
-  min-width: 500px
+  min-width: $main-min-width
 
 h1
   height: 100px !important
@@ -30,7 +41,22 @@ h1
   height: 192px
   margin: 0 auto
 
-.wrapper-content
+.wrapper
+  width: $width-wrapper
+  height: 332px
+  margin: 0 auto
+
+
+.column-1
+  width: $width-col-1
+  float: left
+  margin-right: $col-1-margin-right
+
+.column-2
+  width: $width-col-2
+  float: left
+
+.content
   margin: 0 auto
   padding: 30px
   width: 333px
@@ -50,7 +76,6 @@ h1
   text-align: center
   +shadow
 
-
 .cell:nth-child(4n + 5)
   clear: both
 
@@ -58,14 +83,16 @@ h1
   cursor: pointer
   +shadow-hover
 
+.score
+  +font
+
 .cheat
-  font: 18px/18px Arial
+  +font
   height: 38px
   width: 200px
-  margin: 15px auto
+  margin: 15px 0
   line-height: 38px
   background: #FDFEFE
-
 
 .cheat-off
   display: block
@@ -83,6 +110,32 @@ h1
 
 .cheat span:hover
   cursor: pointer
+
+.newGame
+  +font
+  width: 100%
+  height: 50px
+  line-height: 50px
+  border: none
+  border-radius: 10px
+  background: rgba(0,0,0,.1)
+  +shadow
+
+.newGame:hover
+  background: #ff2800
+  color: #ffffff
+  cursor: pointer
+  +shadow-hover
+  +transition-animation
+
+.newGame:active
+  outline: none
+
+.newGame:visited
+  outline: none
+
+.newGame:focus
+  outline: none
 
 
 
