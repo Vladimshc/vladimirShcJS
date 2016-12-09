@@ -13,7 +13,7 @@ var taskList = {
 };
 
 function add() {
-    var input = $('#input').val();
+    var input = escapeHtml($('#input').val());
     if (input != "") {
         var data = {};
         data.value = input;
@@ -86,7 +86,7 @@ function edit(event) {
 
     $(("#" + id)).keyup(function (event) {
         if(event.keyCode == 13) {
-            windowData[id].value = $(".edit-box")[0].value;
+            windowData[id].value = escapeHtml($(".edit-box")[0].value);
             taskList.stor("tasksJson", windowData);
             printTasks(true, true);
         }
@@ -121,6 +121,17 @@ function clearCompleted() {
     }
     taskList.stor("tasksJson", windowData);
     printTasks(true, true);
+}
+
+function escapeHtml(text) {
+    var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
 
 printTasks(true, true);
