@@ -1,6 +1,5 @@
 var useCheat = false;
 var scoreCount = 0;
-$(".win").hide();
 
 $(document).ready(function () {
     $(document).on("click", ".cell", move);
@@ -62,7 +61,7 @@ function sequence() {
         arrTest.push($("#" + i).text())
     }
     if (arrSeq === arrTest.toString()){
-        $(".win").show();
+        $(".win").css("height", "192px");
         $(document).off("click", ".cell", move);
     }
 }
@@ -71,6 +70,7 @@ function newGame(){
     scoreCount = 0;
     $("#score-id").text(scoreCount);
     $(".content").empty();
+    $(".win").css("height", "0px");
     render();
 }
 
