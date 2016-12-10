@@ -111,7 +111,8 @@ main {
 #main-menu .nav-dropdown {
   position: absolute;
   top: 100%;
-  display: none; }
+  display: none;
+  z-index: 100; }
 
 #main-menu ul li:hover .nav-dropdown {
   display: block; }
