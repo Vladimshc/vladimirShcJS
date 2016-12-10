@@ -60,50 +60,60 @@ main
 
 //--//-----------navigation-------------------//
 //--//--//-------main menu--------------------//
-#main-menu
-  padding-top: 4px
-  opacity: 1
-  position: absolute
-
 #main-menu ul li
-  display: inline-block
-  height: 50px
-  width: 135px
-  overflow: hidden
-  +transition-animation
-
-#lessons ul li:hover
-  width: 265px
-  height: 470px
-
-#lessons ul li a
-  display: block
-  width: 265px
-  height: 40px
-  line-height: 40px
-  background: #5C544F
-  margin: 2px
-  color: #ffffff
-  padding-left: 15px
-  cursor: pointer
-  +text-menu
-  +transition-animation
-  +shadow
-
-#lessons ul li a:hover
-  background: #2fc5ff
-  +shadow-hover
-
-#lessons ul li a:first-child
-  font-size: 1.2em
+  float: left
+  position: relative
+  width: 29.26%
   height: 50px
   line-height: 50px
-  position: relative
+  background: #625754
+  padding: 0 20px
+  margin: 5px 2%
+  border-radius: 30px
+  +transition-animation
 
-.github
-  display: inline-block
+#main-menu ul li:hover
+  +shadow-hover
+  background: #C4B9B6
 
-//--//--//--------block-1-------------------//
+#main-menu ul li a
+  color: #ffffff
+  +text-menu
+
+#main-menu .nav-dropdown
+  position: absolute
+  top: 100%
+  display: none
+
+#main-menu ul li:hover .nav-dropdown
+  display: block
+
+#main-menu .nav-dropdown li
+  height: 40px
+  line-height: 40px
+  width: 250px
+  padding: 0px
+  margin:  0px
+#main-menu .nav-dropdown li:first-child
+  margin-top: 5px
+
+#main-menu .nav-dropdown li a
+  color: #ffffff
+  padding: 0 10px
+  margin: 0
+  +text-menu
+  display: block
+  cursor: pointer
+  height: 40px
+  line-height: 40px
+  background: #897E7B
+  +shadow
+  +transition-animation
+
+#main-menu .nav-dropdown li a:hover
+  background: #C4B9B6
+
+//--//--//--------block-1--//menu//-----------------//
 #block-1
   width: 280px
   float: left
