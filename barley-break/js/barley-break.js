@@ -45,12 +45,12 @@ function move(event) {
     } else {
         if   ( (uuid - 4) === resolution
             || (uuid - 1) === resolution
-            || (uuid + 1) === resolution
+            || ((uuid + 1) === resolution && uuid != 4 && uuid != 8 && uuid != 12)
             || (uuid + 4) === resolution) {
             moveCell();
             score();
         }
-    }
+    }git
     sequence();
 }
 
@@ -71,6 +71,7 @@ function newGame(){
     $("#score-id").text(scoreCount);
     $(".content").empty();
     $(".win").css("height", "0px");
+    $(document).on("click", ".cell", move);
     render();
 }
 
