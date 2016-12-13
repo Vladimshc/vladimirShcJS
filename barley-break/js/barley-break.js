@@ -50,7 +50,7 @@ function move(event) {
             moveCell();
             score();
         }
-    }git
+    }
     sequence();
 }
 
