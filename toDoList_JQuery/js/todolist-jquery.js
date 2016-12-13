@@ -68,6 +68,7 @@ $(document).ready(function () {
     $(document).on("dblclick", ".task", edit);
     $(document).on("click", ".check-box", toggle);
     $("#list").sortable();
+    $(document).on("mouseup", ".ui-sortable-helper", moveTask);
 });
 
 function delTask(event) {
@@ -134,5 +135,29 @@ function escapeHtml(text) {
     return text.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
 
-printTasks(true, true);
 
+function moveTask() {
+    setTimeout(afterMove, 1000);
+    function afterMove() {
+        windowData = [];
+        var arr = $('.task');
+        for (var i = 0; i < arr.length; i++){
+            var data = {};
+            data.completed = false;
+            data.value = arr[i].innerText;
+
+            var reg = /(done)/g;
+            var testClass = arr[i].className;
+            var test = reg.test(testClass);
+            if (test){
+                data.completed = true;
+            } else {
+                // do nothing
+            }
+            windowData.push(data);
+        }
+        taskList.stor("tasksJson", windowData);
+    }
+}
+
+printTasks(true, true);
