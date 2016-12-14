@@ -1,0 +1,85 @@
+$width-col-1: 500px
+$col-1-margin-right: 20px
+$width-col-2: 300px
+$width-wrapper: $width-col-1 + $col-1-margin-right + $width-col-2
+$main-min-width: $width-wrapper + 60px
+
+=font
+  font: 18px/18px "PT Sans", Tahoma, Arial
+
+=transition-animation
+  -webkit-transition: all .5s ease-in-out 0s
+  -moz-transition: all .5s ease-in-out 0s
+  -o-transition: all .5s ease-in-out 0s
+  transition-property: all
+  transition-duration: .5s
+  transition-timing-function: ease-in-out
+  transition-delay: 0s
+
+=shadow
+  box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+  -moz-box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+  -webkit-box-shadow: 0 3px 20px rgba(0,0,0,.25), inset 0 2px 0 rgba(255,255,255,.6), 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+
+=shadow-hover
+  box-shadow: inset 0 0 20px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4),inset 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+  -moz-box-shadow: inset 0 0 20px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4),inset 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+  -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,.4),inset 0 2px 0 rgba(0,0,0,.1), inset 0 0 20px rgba(0,0,0,.1)
+
+main
+  min-width: $main-min-width
+
+h1
+  height: 100px !important
+  line-height: 100px !important
+
+.wrapper
+  width: $width-wrapper
+  height: 500px
+  margin: 0 auto
+
+
+.column-1
+  width: $width-col-1
+  float: left
+  margin-right: $col-1-margin-right
+
+.column-2
+  width: $width-col-2
+  float: left
+
+#map
+  margin: 0 auto
+  width: 500px
+  height: 500px
+
+#address
+  font: 16px/16px Arial
+  padding: 11px 0px
+  width: 80%
+
+#find
+  height: 46px
+  width: 50px
+  padding: 0px 6px
+  text-align: center
+  color: #333333
+  cursor: pointer
+
+#find:hover
+  background: #94faff
+  color: #333333
+
+.position
+  font: 14px/14px Arial
+  line-height: 30px
+
+#position-latitude
+  margin-left: 20px
+
+#position-longitude
+  margin-left: 7px
+
+
+
+

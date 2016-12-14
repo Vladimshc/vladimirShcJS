@@ -1,0 +1,54 @@
+main {
+  min-width: 880px; }
+
+h1 {
+  height: 100px !important;
+  line-height: 100px !important; }
+
+.wrapper {
+  width: 820px;
+  height: 500px;
+  margin: 0 auto; }
+
+.column-1 {
+  width: 500px;
+  float: left;
+  margin-right: 20px; }
+
+.column-2 {
+  width: 300px;
+  float: left; }
+
+#map {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px; }
+
+#address {
+  font: 16px/16px Arial;
+  padding: 11px 0px;
+  width: 80%; }
+
+#find {
+  height: 46px;
+  width: 50px;
+  padding: 0px 6px;
+  text-align: center;
+  color: #333333;
+  cursor: pointer; }
+
+#find:hover {
+  background: #94faff;
+  color: #333333; }
+
+.position {
+  font: 14px/14px Arial;
+  line-height: 30px; }
+
+#position-latitude {
+  margin-left: 20px; }
+
+#position-longitude {
+  margin-left: 7px; }
+
+/*# sourceMappingURL=map.css.map */

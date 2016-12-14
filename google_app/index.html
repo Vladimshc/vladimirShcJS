@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>toDoList_JQuery</title>
+    <title>Google map API</title>
     <meta name="description" content="Volodymyr Shcherbyna test page for learn java script on geekhub">
     <meta name="keywords" content="Volodymyr, Shcherbyna, geekhub, js, java script, test page, learn">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Volodymyr Shcherbyna vladimshc@gmail.com">
     <link rel="stylesheet" href="../sass/style.css">
-    <link rel="stylesheet" href="./sass/style-todolist-jquery.css">
+    <link rel="stylesheet" href="./sass/map.css">
 </head>
 <body>
 <header>
@@ -40,24 +40,17 @@
         </ul>
     </nav>
     <section id="block-2">
-        <h1 id="h11">toDoList JQuery</h1>
-        <div class="wrapper-content">
-            <input name="todo" type="text" id="input" placeholder="Input you task, click 'Add' or press 'Enter'">
-            <button id="add-button" onclick="add()">Add</button>
+        <h1>Google map API</h1>
+        <div class="wrapper">
+            <div class="column-1">
+                <div id="map"></div>
+            </div>
+            <div class="column-2">
+                    <input id="address" type="textbox" value="Черкаси, Шевченка 187">
+                    <input id="find" type="button" value="Find" onclick="codeAddress()">
+                <div class="position">Longitude: <span id="position-longitude"></span></div>
+                <div class="position">Latitude:  <span id="position-latitude"></span></div>
 
-            <div id="list"></div>
-
-            <div class="wrapper-button">
-                <div class="count"><span id="count-tasks"></span> items left</div>
-                <div class="btn-blok-1">
-                    <button class="btn" onclick="printTasks(true, true)">All</button>
-                    <button class="btn" onclick="printTasks(true, false)">Active</button>
-                    <button class="btn" onclick="printTasks(false, true)">Completed</button>
-                    <button class="btn" onclick="clearCompleted()">Clear completed</button>
-                </div>
-                <div>
-                    <button class="btn" onclick="clearLocalStorage()">Clear local storage</button>
-                  </div>
             </div>
         </div>
     </section>
@@ -68,9 +61,9 @@
     <p>Learn js 2016-2017</p>
 </footer>
 
-<script src="../libs/jquery_v1.12.4.js"></script>
-<script src="../libs/jquery-ui.min.js"></script>
-<script src="./js/todolist-jquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDe2DpnXq5Kwc1W32_VcM8GSqE2cET-wds" async defer></script>
+<script src="../libs/jquery-3.1.1.js"></script>
+<script src="./js/map.js"></script>
 
 </body>
 </html>
