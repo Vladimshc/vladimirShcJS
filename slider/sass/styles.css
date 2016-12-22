@@ -87,7 +87,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   outline: none; }
 
 .btn-move-left {
-  z-index: 500;
+  z-index: 10;
   width: 24px;
   height: 43px;
   position: absolute;
