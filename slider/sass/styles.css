@@ -1,0 +1,127 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+.wrapper-slider {
+  margin: 50px auto;
+  position: relative;
+  width: 400px;
+  height: 320px; }
+
+.slider {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden; }
+
+.slides-container {
+  position: absolute;
+  width: 1200px;
+  left: -400px; }
+
+.slide {
+  float: left;
+  width: 400px;
+  height: 300px;
+  display: none; }
+
+.btn-move-right {
+  z-index: 10;
+  width: 24px;
+  height: 43px;
+  position: absolute;
+  background: url("../img/arrow-next.png");
+  right: -24px;
+  top: 128px;
+  border: none; }
+
+.btn-move-right:hover {
+  cursor: pointer;
+  border: none; }
+
+.btn-move-right:focus {
+  border: none;
+  outline: none; }
+
+.btn-move-left {
+  z-index: 500;
+  width: 24px;
+  height: 43px;
+  position: absolute;
+  background: url("../img/arrow-prev.png");
+  left: -24px;
+  top: 128px;
+  border: none; }
+
+.btn-move-left:hover {
+  cursor: pointer;
+  border: none; }
+
+.btn-move-left:focus {
+  border: none;
+  outline: none; }
+
+.dot-container {
+  height: 20px;
+  text-align: center; }
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #0d7199;
+  display: inline-block;
+  margin-right: 5px; }
+
+.dot-activ {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #10adee;
+  display: inline-block;
+  margin-right: 5px; }
+
+/*# sourceMappingURL=styles.css.map */

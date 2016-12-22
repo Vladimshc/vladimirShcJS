@@ -1,0 +1,89 @@
+@import 'compass/reset'
+
+
+.wrapper-slider
+  margin: 50px auto
+  position: relative
+  width: 400px
+  height: 320px
+
+
+
+.slider
+  position: relative
+  width: 400px
+  height: 300px
+  overflow: hidden
+
+.slides-container
+  position: absolute
+  width: 1200px
+  left: -400px
+
+.slide
+  float: left
+  width: 400px
+  height: 300px
+  display: none
+
+.btn-move-right
+  z-index: 10
+  width: 24px
+  height: 43px
+  position: absolute
+  background: url("../img/arrow-next.png")
+  right: -24px
+  top: 128px
+  border: none
+
+.btn-move-right:hover
+  cursor: pointer
+  border: none
+
+.btn-move-right:focus
+  border: none
+  outline: none
+
+
+.btn-move-left
+  z-index: 500
+  width: 24px
+  height: 43px
+  position: absolute
+  background: url("../img/arrow-prev.png")
+  left: -24px
+  top: 128px
+  border: none
+
+.btn-move-left:hover
+  cursor: pointer
+  border: none
+
+.btn-move-left:focus
+  border: none
+  outline: none
+
+
+.dot-container
+  height: 20px
+  text-align: center
+
+.dot
+  width: 20px
+  height: 20px
+  border-radius: 10px
+  background: #0d7199
+  display: inline-block
+  margin-right: 5px
+
+.dot-activ
+  width: 20px
+  height: 20px
+  border-radius: 10px
+  background: #10adee
+  display: inline-block
+  margin-right: 5px
+
+
+
+
