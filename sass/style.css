@@ -205,7 +205,8 @@ main {
 #block-2 {
   min-height: 700px;
   padding-top: 60px;
-  margin: 0px auto; }
+  margin: 0px auto;
+  display: table; }
 
 #block-2 h1 {
   font-family: "PT Sans", Tahoma, Arial;

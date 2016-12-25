@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>barley-break</title>
+    <title>Rss Parser</title>
     <meta name="description" content="Volodymyr Shcherbyna test page for learn java script on geekhub">
     <meta name="keywords" content="Volodymyr, Shcherbyna, geekhub, js, java script, test page, learn">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Volodymyr Shcherbyna vladimshc@gmail.com">
     <link rel="stylesheet" href="../sass/style.css">
-    <link rel="stylesheet" href="./sass/barley-break.css">
+    <link rel="stylesheet" type="text/css" href="./sass/rss.css" />
 </head>
 <body>
 <header>
@@ -42,18 +42,25 @@
         </ul>
     </nav>
     <section id="block-2">
-        <h1>Barley-break</h1>
-        <div class="win"></div>
-        <div class="wrapper">
-            <div class="column-1">
-                <div class="content"></div>
-            </div>
-            <div class="column-2">
-                <div class="score">Ходов: <span id="score-id"></span></div>
-                <div class="cheat"><span class="cheat-off"></span>Усилитель мозга</div>
-                <button class="newGame" onclick="newGame()">Новая игра</button>
+        <!--begin parser block-->
+        <div class="wrapper-blok">
+            <img src="./img/loading6_230x230-cooler.gif" id="indicator" alt="загрузка"/>
+            <h3>Заголовки новин</h3>
+            <ul id="rssContent" style="min-height: 500px">
+            </ul>
+            <div class="wrap-result">
+                <div class="most-words">
+                    <h3>Найчастіше повторюються</h3>
+                </div>
+                <div class="long-words">
+                    <h3>Найдовші 5 слів:</h3>
+                </div>
+                <div class="short-words">
+                    <h3>Найкоротші 5 слів:</h3>
+                </div>
             </div>
         </div>
+        <!--end parser block-->
     </section>
 </main>
 
@@ -63,7 +70,18 @@
 </footer>
 
 <script src="../libs/jquery-3.1.1.js"></script>
-<script src="./js/barley-break.js"></script>
+<script src="./js/rss.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
