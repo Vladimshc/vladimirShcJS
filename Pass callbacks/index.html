@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Google map API</title>
+    <title>Rss Parser</title>
     <meta name="description" content="Volodymyr Shcherbyna test page for learn java script on geekhub">
     <meta name="keywords" content="Volodymyr, Shcherbyna, geekhub, js, java script, test page, learn">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Volodymyr Shcherbyna vladimshc@gmail.com">
     <link rel="stylesheet" href="../sass/style.css">
-    <link rel="stylesheet" href="./sass/map.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
 <body>
 <header>
@@ -43,19 +43,42 @@
         </ul>
     </nav>
     <section id="block-2">
-        <h1>Google map API</h1>
-        <div class="wrapper">
-            <div class="column-1">
-                <div id="map"></div>
-            </div>
-            <div class="column-2">
-                    <input id="address" type="textbox" value="Черкаси, Шевченка 187">
-                    <input id="find" type="button" value="Find" onclick="codeAddress()">
-                <div class="position">Longitude: <span id="position-longitude"></span></div>
-                <div class="position">Latitude:  <span id="position-latitude"></span></div>
+        <!--begin page block-->
 
-            </div>
-        </div>
+            <h1 style="height: 40px; line-height: 40px">Завдання:</h1>
+            <p>Замість рядка "//TODO implement" написати тіло функції, щоб код виконувався без помилок, і ланцюжок then можна було продовжувати й надалі.
+                Тільки в одному місці вставляємо код, інше не чіпаємо.</p>
+            <a href="https://gist.github.com/kikill95/14e5bf101c1b77babc8b431c8e498d9d">Завдання</a>
+            <br>
+            <br>
+            <pre>
+            function perform() {
+                //TODO implement
+                var callArg_1 = arguments[1]();
+                return {
+                    then: function (cb) {
+                        callArg_1 = cb(callArg_1);
+                        return this;
+                    }
+                }
+            }
+
+            perform(null, function() {
+                var param = 1;
+                console.log(param);
+                return param;
+            })
+                .then(function(param) {
+                    console.log(++param);
+                    return param;
+                })
+                .then(function(param) {
+                    console.log(++param);
+                    return param;
+                });
+        </pre>
+
+        <!--end page block-->
     </section>
 </main>
 
@@ -64,9 +87,7 @@
     <p>Learn js 2016-2017</p>
 </footer>
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDe2DpnXq5Kwc1W32_VcM8GSqE2cET-wds" async defer></script>
-<script src="../libs/jquery-3.1.1.js"></script>
-<script src="./js/map.js"></script>
+<script src="./home.js"></script>
 
 </body>
 </html>
